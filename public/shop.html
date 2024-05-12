@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nibras Shop</title>
+    <link rel="stylesheet" href="styleshop.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="color: #ffd700;">نبراس Shop</h1>
+        <p>Explore our diverse collection of clothing categories</p>
+        
+<!-- shopping cart button -->
+<button id="view-cart-btn">View Cart</button>
+<!-- Cart Box -->
+<div id="cart-box" class="cart-box">
+    <img src="hoodie00.webp" alt="Item added">
+    <p style="color: black;">premium hoodie</p>
+    <p style="color: black;">price: 234$</p>
+    <p style="color: black;">-----------------</p>
+    <p style="color: black;">One item added</p>
+</div>
+
+
+    </header>
+
+   
+
+        <div class="category-images">
+                <div class="category-card" id="hoodies">
+                    <img src="hoodie00.webp" alt="Category 1">
+                    <h3>november girf : hoodies</h3>
+                    <p>Discover the latest hoodies in trends</p>
+                    <a href="#" id="explore-hoodies">Explore</a>
+                </div>
+            
+
+                <div class="category-card" id="jacket">
+                    <img src="jacket2.webp" alt="Category 2">
+                    <h3>jackets</h3>
+                    <p>Express your style with our mens jacket collection</p>
+                    <a href="#" id="explore-jackets">Explore</a>
+                    
+                </div>
+
+                <div class="category-card" id="caps">
+                    <img src="pcap (2).jpeg" alt="Category 3">
+                    <h3>stuff you need</h3>
+                    <p>props for you</p>
+                    <a href="#" id="explore-caps">Explore</a>   
+                </div>
+        </div>
+    </section>
+    <script>
+// /////////////////////////////FOR BACKGROUNG///////////////////////////////////////////////////
+
+
+        // FOR CART /////////////////////////////////////////////////////////////////////////////////////////////////////
+document.addEventListener('DOMContentLoaded', function() {
+    const viewCartBtn = document.getElementById('view-cart-btn');
+    const cartBox = document.getElementById('cart-box');
+
+    let isCartOpen = false;
+
+    // Function to toggle the cart box
+    function toggleCartBox() {
+        isCartOpen = !isCartOpen;
+        cartBox.style.display = isCartOpen ? 'block' : 'none';
+    }
+
+    // Event listener for the View Cart button
+    viewCartBtn.addEventListener('click', function() {
+        toggleCartBox();
+    });
+});
+
+
+// ///////////////FOR COLLECTIONS ///////////////////////////////////////////////////////////////////////////////////////////////////
+//caps:
+function showcaps() {
+        // Hide other collections
+        document.querySelectorAll('.category-card').forEach(function(card) {
+            card.style.display = 'none';
+        });
+
+        // Show only hoodie collection
+        var hoodiesContainer = document.getElementById('caps');
+        hoodiesContainer.style.display = 'block';
+    
+            // Clear existing content
+            hoodiesContainer.innerHTML = '';
+    
+            // Create product cards for each hoodie
+            // Hoodie 1
+            var productCard1 = document.createElement('div');
+            productCard1.className = 'product-card';
+    
+            var hoodieImage1 = document.createElement('img');
+            hoodieImage1.src = "capp.jpeg";
+            hoodieImage1.alt = 'cap 1';
+    
+            var hoodieName1 = document.createElement('h4');
+            hoodieName1.textContent = 'cap 1';
+    
+            var hoodiePrice1 = document.createElement('p');
+            hoodiePrice1.textContent = '$19.99';
+    
+            // Append elements to the product card
+            productCard1.appendChild(hoodieImage1);
+            productCard1.appendChild(hoodieName1);
+            productCard1.appendChild(hoodiePrice1);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard1);
+    
+            // Hoodie 2
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'caps.webp';
+            hoodieImage2.alt = 'cap 2';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'cap 2';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$19.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+    
+            // Repeat the same process for each hoodie
+            // Hoodie 3, Hoodie 4, etc.
+            // hoodie 3
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'caps.webp';
+            hoodieImage2.alt = 'cap 3';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'cap 3';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$19.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            //hoodie 4:
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'gloves.jpeg';
+            hoodieImage2.alt = 'gloves';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'gloves';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$39.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            // hoodie 5
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'pcap (2).jpeg';
+            hoodieImage2.alt = 'pcap 5';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'pcap 5';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$19.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+
+            //6 - 00
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'shoes.jpeg';
+            hoodieImage2.alt = 'shoes';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'shoes';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$89.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'socks.jpeg';
+            hoodieImage2.alt = 'robo socks';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'robo socks';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$39.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'sportsbra.webp';
+            hoodieImage2.alt = 'women 13';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'women 13';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$49.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+        }
+    
+        // Add event listener to the "Explore" link for hoodies
+        document.getElementById('explore-caps').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            showcaps(); // Call function to display hoodies
+        });
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//jackets: collection 2:
+// function showJackets() {
+
+//         document.querySelectorAll('.category-card').forEach(function(card) {
+//             card.style.display = 'none';
+//         });
+
+//         var hoodiesContainer = document.getElementById('jacket');
+//         hoodiesContainer.style.display = 'block';
+    
+//             hoodiesContainer.innerHTML = '';
+    
+//             var productCard1 = document.createElement('div');
+//             productCard1.className = 'product-card';
+    
+//             var hoodieImage1 = document.createElement('img');
+//             hoodieImage1.src = "womencoat.webp";
+//             hoodieImage1.alt = 'coat number 1';
+    
+//             var hoodieName1 = document.createElement('h4');
+//             hoodieName1.textContent = 'coat number 1';
+    
+//             var hoodiePrice1 = document.createElement('p');
+//             hoodiePrice1.textContent = '$349.99';
+
+//             productCard1.appendChild(hoodieImage1);
+//             productCard1.appendChild(hoodieName1);
+//             productCard1.appendChild(hoodiePrice1);
+    
+
+//             hoodiesContainer.appendChild(productCard1);
+    
+//             var productCard2 = document.createElement('div');
+//             productCard2.className = 'product-card';
+    
+//             var hoodieImage2 = document.createElement('img');
+//             hoodieImage2.src = 'womencoat2.webp';
+//             hoodieImage2.alt = 'coat number 2';
+    
+//             var hoodieName2 = document.createElement('h4');
+//             hoodieName2.textContent = 'coat number 2';
+    
+//             var hoodiePrice2 = document.createElement('p');
+//             hoodiePrice2.textContent = '$359.99';
+    
+        
+//             productCard2.appendChild(hoodieImage2);
+//             productCard2.appendChild(hoodieName2);
+//             productCard2.appendChild(hoodiePrice2);
+    
+         
+//             hoodiesContainer.appendChild(productCard2);
+    
+        
+//             var productCard2 = document.createElement('div');
+//             productCard2.className = 'product-card';
+    
+//             var hoodieImage2 = document.createElement('img');
+//             hoodieImage2.src = 'womenactivewear.webp';
+//             hoodieImage2.alt = 'active wear 3';
+    
+//             var hoodieName2 = document.createElement('h4');
+//             hoodieName2.textContent = 'active wear 3';
+    
+//             var hoodiePrice2 = document.createElement('p');
+//             hoodiePrice2.textContent = '$59.99';
+    
+//             productCard2.appendChild(hoodieImage2);
+//             productCard2.appendChild(hoodieName2);
+//             productCard2.appendChild(hoodiePrice2);
+    
+          
+//             hoodiesContainer.appendChild(productCard2);
+
+//             var productCard2 = document.createElement('div');
+//             productCard2.className = 'product-card';
+    
+//             var hoodieImage2 = document.createElement('img');
+//             hoodieImage2.src = 'jacket1.webp';
+//             hoodieImage2.alt = 'jacket1 1';
+    
+//             var hoodieName2 = document.createElement('h4');
+//             hoodieName2.textContent = 'jacket 1';
+    
+//             var hoodiePrice2 = document.createElement('p');
+//             hoodiePrice2.textContent = '$59.99';
+   
+//             productCard2.appendChild(hoodieImage2);
+//             productCard2.appendChild(hoodieName2);
+//             productCard2.appendChild(hoodiePrice2);
+    
+         
+//             hoodiesContainer.appendChild(productCard2);
+
+       
+//             var productCard2 = document.createElement('div');
+//             productCard2.className = 'product-card';
+    
+//             var hoodieImage2 = document.createElement('img');
+//             hoodieImage2.src = 'jacket2.webp';
+//             hoodieImage2.alt = 'jacket1 2';
+    
+//             var hoodieName2 = document.createElement('h4');
+//             hoodieName2.textContent = 'jacket 2';
+    
+//             var hoodiePrice2 = document.createElement('p');
+//             hoodiePrice2.textContent = '$459.99';
+    
+        
+//             productCard2.appendChild(hoodieImage2);
+//             productCard2.appendChild(hoodieName2);
+//             productCard2.appendChild(hoodiePrice2);
+    
+           
+//             hoodiesContainer.appendChild(productCard2);
+
+          
+//             var productCard2 = document.createElement('div');
+//             productCard2.className = 'product-card';
+    
+//             var hoodieImage2 = document.createElement('img');
+//             hoodieImage2.src = 'menactivewear.webp';
+//             hoodieImage2.alt = 'active wear 2';
+    
+//             var hoodieName2 = document.createElement('h4');
+//             hoodieName2.textContent = 'active wear 2';
+    
+//             var hoodiePrice2 = document.createElement('p');
+//             hoodiePrice2.textContent = '$459.99';
+    
+         
+//             productCard2.appendChild(hoodieImage2);
+//             productCard2.appendChild(hoodieName2);
+//             productCard2.appendChild(hoodiePrice2);
+    
+           
+//             hoodiesContainer.appendChild(productCard2);
+
+
+//         }
+    
+        
+//         document.getElementById('explore-jackets').addEventListener('click', function(event) {
+//             event.preventDefault(); 
+//             showJackets(); 
+//         });
+
+
+
+function showJackets() {
+    // Hide other collections
+    document.querySelectorAll('.category-card').forEach(function(card) {
+        card.style.display = 'none';
+    });
+
+    // Show only jacket collection
+    var jacketsContainer = document.getElementById('jacket');
+    jacketsContainer.style.display = 'block';
+
+    // Clear existing content
+    jacketsContainer.innerHTML = '';
+
+    // Create product cards for each jacket
+    // Jacket 1
+    var productCard1 = createProductCard('womencoat.webp', 'coat number 1', '$349.99');
+    jacketsContainer.appendChild(productCard1);
+
+    // Jacket 2
+    var productCard2 = createProductCard('womencoat2.webp', 'coat number 2', '$359.99');
+    jacketsContainer.appendChild(productCard2);
+
+    var productCard3 = createProductCard('jacket1.webp', 'limited edition jacket 1', '$149.99');
+    jacketsContainer.appendChild(productCard3);
+
+    // Jacket 2
+    var productCard4 = createProductCard('jacket2.webp', 'just for you 2', '$259.99');
+    jacketsContainer.appendChild(productCard4);
+
+    var productCard5 = createProductCard('menactivewear.webp', 'Active Wear men', '$49.99');
+    jacketsContainer.appendChild(productCard5);
+
+    // Jacket 2
+    var productCard6 = createProductCard('womenactivewear.webp', 'women active wear', '$59.99');
+    jacketsContainer.appendChild(productCard6);
+
+
+    
+}
+
+// Function to create a product card
+function createProductCard(imageSrc, name, price) {
+    var productCard = document.createElement('div');
+    productCard.className = 'product-card';
+
+    var hoodieImage = document.createElement('img');
+    hoodieImage.src = imageSrc;
+    hoodieImage.alt = name;
+
+    var hoodieName = document.createElement('h4');
+    hoodieName.textContent = name;
+
+    var hoodiePrice = document.createElement('p');
+    hoodiePrice.textContent = price;
+
+    // Append elements to the product card
+    productCard.appendChild(hoodieImage);
+    productCard.appendChild(hoodieName);
+    productCard.appendChild(hoodiePrice);
+
+    // Add event listeners for mouseover and mouseout events
+    productCard.addEventListener('mouseover', function() {
+        // Create and display the translucent box with product details
+        var detailsBox = createDetailsBox(name, price); // Customize this function as needed
+        this.appendChild(detailsBox);
+    });
+
+    productCard.addEventListener('mouseout', function() {
+        // Remove the translucent box when mouse leaves the product card
+        var detailsBox = this.querySelector('.details-box');
+        if (detailsBox) {
+            detailsBox.remove();
+        }
+    });
+
+    return productCard;
+}
+
+// Function to create the translucent box with product details
+// Function to create the translucent box with product details
+function createDetailsBox(name, price) {
+    var detailsBox = document.createElement('div');
+    detailsBox.className = 'details-box';
+
+    // Add product details
+    detailsBox.innerHTML = `
+        <p>Product: ${name}</p>
+        <p>Price: ${price}</p>
+        <p>Collection: Collection 2</p>
+        <p>Material: Winter wear</p>
+        <p>Gender: Unisex</p>
+        <p>Sizes: S, M, L, XL , 2XL</p>
+    `;
+
+    return detailsBox;
+}
+
+// Add event listener to the "Explore" link for jackets
+document.getElementById('explore-jackets').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    showJackets(); // Call function to display jackets
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //--------------------------------------------------------------------------------------------------------------------------------
+        //hoodies : collection 1
+        function showHoodies() {
+        // Hide other collections
+        document.querySelectorAll('.category-card').forEach(function(card) {
+            card.style.display = 'none';
+        });
+
+        // Show only hoodie collection
+        var hoodiesContainer = document.getElementById('hoodies');
+        hoodiesContainer.style.display = 'block';
+    
+            // Clear existing content
+            hoodiesContainer.innerHTML = '';
+    
+            // Create product cards for each hoodie
+            // Hoodie 1
+            var productCard1 = document.createElement('div');
+            productCard1.className = 'product-card';
+    
+            var hoodieImage1 = document.createElement('img');
+            hoodieImage1.src = "hoddi12.webp";
+            hoodieImage1.alt = 'Hoodie 1';
+    
+            var hoodieName1 = document.createElement('h4');
+            hoodieName1.textContent = 'Hoddie 1';
+    
+            var hoodiePrice1 = document.createElement('p');
+            hoodiePrice1.textContent = '$49.99';
+    
+            // Append elements to the product card
+            productCard1.appendChild(hoodieImage1);
+            productCard1.appendChild(hoodieName1);
+            productCard1.appendChild(hoodiePrice1);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard1);
+    
+            // Hoodie 2
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie1.webp';
+            hoodieImage2.alt = 'Hoodie 2';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 2';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+    
+            // Repeat the same process for each hoodie
+            // Hoodie 3, Hoodie 4, etc.
+            // hoodie 3
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie2.webp';
+            hoodieImage2.alt = 'Hoodie 3';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 3';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            //hoodie 4:
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie3.webp';
+            hoodieImage2.alt = 'Hoodie 4';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 4';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            // hoodie 5
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie4.webp';
+            hoodieImage2.alt = 'Hoodie 5';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 5';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+
+            //6 - 00
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie5.webp';
+            hoodieImage2.alt = 'Hoodie 6';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 6';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie6.webp';
+            hoodieImage2.alt = 'Hoodie 7';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 7';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie7.webp';
+            hoodieImage2.alt = 'Hoodie 8';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 8';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie8.webp';
+            hoodieImage2.alt = 'Hoodie 9';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 9';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie9.webp';
+            hoodieImage2.alt = 'Hoodie 10';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 10';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie10.webp';
+            hoodieImage2.alt = 'Hoodie 11';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 11';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoddie11.webp';
+            hoodieImage2.alt = 'Hoodie 12';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 12';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+            var productCard2 = document.createElement('div');
+            productCard2.className = 'product-card';
+    
+            var hoodieImage2 = document.createElement('img');
+            hoodieImage2.src = 'hoodie00.webp';
+            hoodieImage2.alt = 'Hoodie 13';
+    
+            var hoodieName2 = document.createElement('h4');
+            hoodieName2.textContent = 'Hoodie 13';
+    
+            var hoodiePrice2 = document.createElement('p');
+            hoodiePrice2.textContent = '$59.99';
+    
+            // Append elements to the product card
+            productCard2.appendChild(hoodieImage2);
+            productCard2.appendChild(hoodieName2);
+            productCard2.appendChild(hoodiePrice2);
+    
+            // Append product card to the hoodies container
+            hoodiesContainer.appendChild(productCard2);
+
+        }
+    
+        // Add event listener to the "Explore" link for hoodies
+        document.getElementById('explore-hoodies').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            showHoodies(); // Call function to display hoodies
+        });
+    </script>
+    
+    <footer>
+        <p>&copy; 2024 Nibras. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
